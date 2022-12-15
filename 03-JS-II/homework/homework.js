@@ -46,8 +46,10 @@ function conection(status) {
   switch (status){
     case 1:
       x= 'Online';
+      break;
     case 2:
       x= 'Away';
+      break;
     default:
       x= 'Offline';
   }
@@ -65,10 +67,13 @@ function saludo(idioma) {
   switch (idioma){
     case 'aleman':
       x= 'Guten Tag!';
+      break;
     case 'mandarin':
       x= 'Ni Hao!';
+      break;
     case 'ingles':
       x= 'Hello!';
+      break;
     default:
       x= 'Hola!';
   }
@@ -87,12 +92,16 @@ function colors(color) {
   switch (idioma){
     case 'blue':
       x= 'This is blue';
+      break;
     case 'red':
       x= 'This is red';
+      break;
     case 'green':
       x= 'This is green';
+      break;
     case 'orange':
       x= 'This is orange';
+      break;
     default:
       x= 'Color not found';
   }
@@ -142,7 +151,7 @@ function fizzBuzz(numero) {
   // Si "numero" es divisible entre 5, devuelve "buzz"
   // Si "numero" es divisible entre 3 y 5 (ambos), devuelve "fizzbuzz"
   // De lo contrario, devuelve el numero
-  
+
 }
 
 function operadoresLogicos(num1, num2, num3) {
