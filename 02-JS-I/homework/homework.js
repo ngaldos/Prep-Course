@@ -76,7 +76,7 @@ function tienenMismaLongitud(str1, str2) {
   // Devuelve "true" si las dos strings tienen la misma longitud
   // De lo contrario, devuelve "false"
   // Tu código:
-  if (str1.leng() === str2.leng()) {
+  if (str1.length === str2.length) {
     return true
   }
     else{
@@ -139,42 +139,42 @@ function elevarAlCuadrado(num) {
   // Devuelve el valor de "num" elevado al cuadrado
   // ojo: No es raiz cuadrada!
   // Tu código:
-  var x= math.pow(num, 2);
+  var x= Math.pow(num,2);
   return x;
 }
 
 function elevarAlCubo(num) {
   // Devuelve el valor de "num" elevado al cubo
   // Tu código:
-  var x= math.pow(num, 3);
+  var x= Math.pow(num,3);
   return x;
 }
 
 function elevar(num, exponent) {
   // Devuelve el valor de "num" elevado al exponente dado en "exponent"
   // Tu código:
-  var x= math.pow(num, exponent);
+  var x= Math.pow(num,exponent);
   return x;
 }
 
 function redondearNumero(num) {
   // Redondea "num" al entero más próximo y devuélvelo
   // Tu código:
-  var x= math.round(num);
+  var x= Math.round(num);
   return x;
 }
 
 function redondearHaciaArriba(num) {
   // Redondea "num" hacia arriba (al próximo entero) y devuélvelo
   // Tu código:
-  var x= math.ceil(num);
+  var x= Math.ceil(num);
   return x;
 }
 
 function numeroRandom() {
   //Generar un número al azar entre 0 y 1 y devolverlo
   //Pista: investigá qué hace el método Math.random()
-  var x= math.floor(num);
+  var x= Math.floor(num);
   return x;
 }
 
@@ -187,7 +187,7 @@ function esPositivo(numero) {
   if (numero >= 0){
     x= 'Es positivo.';
   }
-  else{
+  if (numero < 0){
     x= 'Es negativo.';
   }
   return x;
