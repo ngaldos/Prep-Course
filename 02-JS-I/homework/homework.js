@@ -187,11 +187,13 @@ function esPositivo(numero) {
   if (numero > 0){
     x= 'Es positivo';
   }
-  if (numero < 0){
-    x= 'Es negativo';
-  }
-  if (numero === 0){
-    x= false;
+  else{
+    if (numero === 0){
+      x= false;
+    }
+    else{
+      x= 'Es negativo';
+    }
   }
   return x;
 }
