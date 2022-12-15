@@ -174,7 +174,7 @@ function redondearHaciaArriba(num) {
 function numeroRandom() {
   //Generar un número al azar entre 0 y 1 y devolverlo
   //Pista: investigá qué hace el método Math.random()
-  var x= Math.floor(num);
+  var x= Math.random(num);
   return x;
 }
 
@@ -184,11 +184,11 @@ function esPositivo(numero) {
   //Si el número es negativo, devolver ---> "Es negativo"
   //Si el número es 0, devuelve false
   var x;
-  if (numero >= 0){
-    x= 'Es positivo.';
+  if (numero > 0){
+    x= 'Es positivo';
   }
-  if (numero < 0){
-    x= 'Es negativo.';
+  if (numero <= 0){
+    x= 'Es negativo';
   }
   return x;
 }
@@ -213,7 +213,7 @@ function obtenerSaludo(nombre) {
   // Toma la string "nombre" y concatena otras string en la cadena para que tome la siguiente forma:
   // "Martin" -> "Hola Martin!"
   // Tu código:
-  var str = 'Hola ' + nombre + '!';
+  var str = 'Hola '+nombre+'!';
 }
 
 function obtenerAreaRectangulo(alto, ancho) {
@@ -256,7 +256,7 @@ function esVocal(letra){
   // Si no es vocal, tambien debe devolver "Dato incorrecto".
   //Escribe tu código aquí
   var respuesta = 'Dato incorrecto.';
-  if (letra.leng() === 1){
+  if (letra.length === 1){
     if ( (letra === 'a') || (letra === 'e') || (letra === 'i') || (letra === 'o') || (letra === 'u') ) {
       respuesta= 'Es vocal.';
     }
