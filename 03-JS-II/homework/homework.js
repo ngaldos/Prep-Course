@@ -89,7 +89,7 @@ function colors(color) {
   //Caso default: devuelve --> "Color not found"
   //Usar el statement Switch.
   var x;
-  switch (idioma){
+  switch (color){
     case 'blue':
       x= 'This is blue';
       break;
@@ -175,22 +175,27 @@ function operadoresLogicos(num1, num2, num3) {
   //Si num3 es más grande que num1 y num2, aumentar su valor en 1 y retornar el nuevo valor.
   //0 no es ni positivo ni negativo. Si alguno de los argumentos es 0, retornar "Error".
   //Si no se cumplen ninguna de las condiciones anteriores, retornar false. 
+  var x;
   if ( (num1 === 0) || (num2 === 0) || (num3 === 0) ){
-    var x= 'Error';
+    x= 'Error';
+    //return x;
   }
   else if ( (num1 < 0) || (num2 < 0) || (num3 < 0) ){
-    var x= 'Hay negativos';
+    x= 'Hay negativos';
+   // return x;
   }
   else if ( (num1 > num2) && (num1 > num3) && ( (num1 % 2) === 0) ){
-    var x= 'Número 1 es mayor y positivo';
+    x= 'Número 1 es mayor y positivo';
+   // return x;
   }
   else if ( (num3 > num1) && (num3 > num2) ){
     num3++;
     return num3;
   }
   else{
-    return false;
+    x= false;
   }
+  return x;
 }
 
 function esPrimo(numero) {
@@ -201,7 +206,7 @@ function esPrimo(numero) {
   // Nota: Los números 0 y 1 NO son considerados números primos
   var ok= true;
   for (let i= 2; i< 9; i++){
-    if ( (i !== numero) && (numero % i) === 0){
+    if(  ( (i !== numero) && (numero % i) === 0) || ( (numero === 0) || (numero === 1) )  ){
       ok= false;
     }
   }
@@ -212,12 +217,11 @@ function esVerdadero(valor){
   //Escribe una función que reciba un valor booleano y retorne “Soy verdadero” 
   //si su valor es true y “Soy falso” si su valor es false.
   //Escribe tu código aquí
+  var x= 'Soy falso';
   if (valor){
-    return 'Soy verdadero';
+    x= 'Soy verdadero';
   }
-  else{
-    return 'Soy falso';
-  }
+  return x;
 }
 
 function tablaDelSeis(){
@@ -231,10 +235,20 @@ function tieneTresDigitos(numero){
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí
   var x= numero;
-  for (var i= 1; i< 3; i++){
-    x= x % 10;
+  var ok= false;
+  var cant= 0;
+  for (var i= 0; i< 3; i++){
+    if( (x % 10) !== 0 ){
+      cant++;
+      x= x % 10;
+    }
   }
-  if (x !== 0){
+  if (cant === 3){
+    ok= true;
+    return ok;
+  }
+  else{
+    return ok;
   }
 }
 
@@ -242,6 +256,13 @@ function doWhile(numero) {
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
   //Retornar el valor final.
   //Usar el bucle do ... while.
+  var cant= 0;
+  var x= numero;
+  do{
+    x= x + 5;
+    cant++;
+  }while (cant < 8);
+  return x;
 }
 
 
