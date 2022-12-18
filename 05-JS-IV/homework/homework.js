@@ -30,7 +30,7 @@ function invocarMetodo (objeto, metodo) {
   // Invoca ese método
   // Nada necesita ser devuelto ("returned")
   // Tu código:
-  objeto['metodo'];
+  
 }
 
 function multiplicarNumeroDesconocidoPorCinco (objetoMisterioso) {
@@ -48,7 +48,7 @@ function eliminarPropiedad (objeto, unaPropiedad) {
   // Devuelve el objeto
   // Tu código:
   //delete objeto['unaPropiedad'];
-  delete objeto['unaPropiedad'];
+  delete objeto.unaPropiedad;
   return objeto;
 }
 
@@ -69,7 +69,7 @@ function tieneEmail (usuario) {
   // De lo contrario, devuelve "false"
   // Tu código:
   var ok= true;
-  if (usuario.email === null){
+  if ( (usuario.email === null) || (usuario.email === undefined) ){
     ok= false;
   }
   return ok;
