@@ -22,7 +22,7 @@ function agregarPropiedad (objeto, property) {
   // Devuelve el objeto
   // NOTA: El nombre de la propiedad no es "propiedad", el nombre es el valor del argumento llamado "property" (una cadena/string)
   // Tu código:
-  objeto.property= null;
+  objeto[property] = null;
 }
 
 function invocarMetodo (objeto, metodo) {
@@ -30,16 +30,15 @@ function invocarMetodo (objeto, metodo) {
   // Invoca ese método
   // Nada necesita ser devuelto ("returned")
   // Tu código:
-  
+  objeto[metodo];
 }
 
 function multiplicarNumeroDesconocidoPorCinco (objetoMisterioso) {
   // "objetoMisterioso" tiene una propiedad llamada "numeroMisterioso"
   // Multiplica el numeroMisterioso por 5 y devuelve el producto
   // Tu código:
-  var x= objetoMisterioso.numeroMisterioso * 5;
+  var x= objetoMisterioso.numeroMisterioso* 5;
   return x;
-
 }
 
 function eliminarPropiedad (objeto, unaPropiedad) {
@@ -48,7 +47,7 @@ function eliminarPropiedad (objeto, unaPropiedad) {
   // Devuelve el objeto
   // Tu código:
   //delete objeto['unaPropiedad'];
-  delete objeto.unaPropiedad;
+  delete objeto[unaPropiedad];
   return objeto;
 }
 
@@ -82,7 +81,7 @@ function tienePropiedad (objeto, propiedad) {
   // Tu código:
   var ok= false;
   for (let clave in objeto){
-    if (clave === propiedad){
+    if (objeto[clave] === propiedad){
       ok= true;
     }
   }
@@ -95,7 +94,7 @@ function verificarPassword (usuario, password) {
   // De lo contrario, devuelve "false"
   // Tu código:
   var ok= false;
-  if (usuario.password === password){
+  if (usuario[password] === password){
     ok= true;
   }
   return ok;
@@ -154,7 +153,10 @@ function agregarMetodoCalculoDescuento (producto) {
   // producto.porcentajeDeDescuento -> 0.2 (o simplemente ".2")
   // producto.calcularPrecioDescuento() -> 20 - (20 * 0.2)
   // Tu código:
-  
+  producto.calcularPrecioDescuento= function(){
+    this[precio]= (this[precio] - (this[precio]* this[porcentajeDescuento]) );
+  };
+  return producto;
 }
 
 // No modificar nada debajo de esta línea
