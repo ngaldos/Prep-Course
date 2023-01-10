@@ -18,3 +18,21 @@
             html{
                 background-color: aqua;
             }
+            #topBar{
+                color: royalblue;
+                height: 50px;
+                display: block;
+                position: fixed;
+                top: 10px;
+            }
+            #fifthDiv{
+                height: 400px;
+                width: 500;
+                display: inline;
+                border: 2px solid red;
+                margin: 10px;
+            }
+            #titulo{
+                position: fixed;
+                left: 200px;
+            }
